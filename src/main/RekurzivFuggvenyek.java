@@ -80,5 +80,35 @@ public class RekurzivFuggvenyek {
         }
     }
     
+    static int hatvanyRekTovabb(int alap, int kitevo) {
+        if (kitevo == 0) {
+            return 1;
+        } else if (kitevo % 2 == 0) {
+            return hatvanyRekTovabb(alap, kitevo*kitevo) * alap;
+        } else  {
+            return hatvanyRek(alap, kitevo-1) * alap;
+        }
+    }
+            
+
+    static int fibonacci(int i) {
+        int[] eredmeny = new int[i];
+        eredmeny[0] = 1;
+        eredmeny[1] = 1;
+        for (int j = 2; j < eredmeny.length; j++) {
+            eredmeny[j] = eredmeny[j-1] + eredmeny[j-2];
+        }
+        return eredmeny[i-1];
+        
+    }
+
+    static int fibonacciRek(int i) {
+        if (i == 1 || i == 2) {
+            return 1;
+        }
+        
+        return fibonacciRek(i - 1) + fibonacciRek(i - 2);
+    }
+    
     
 }

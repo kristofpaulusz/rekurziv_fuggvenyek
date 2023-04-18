@@ -49,6 +49,18 @@ public class Main {
         System.out.println(RekurzivFuggvenyek.hatvanyRek(6, 3));
         vege = System.nanoTime();
         System.out.println("Rekurziv hatvany: "+ (vege-kezdet) + " nSec");
+        
+        // Iterativ 
+        kezdet = System.nanoTime();
+        System.out.println(RekurzivFuggvenyek.fibonacci(15));
+        vege = System.nanoTime();
+        System.out.println("Iterativ fibonacci: "+ (vege-kezdet) + " nSec");
+        
+        // Rek. 
+        kezdet = System.nanoTime();
+        System.out.println(RekurzivFuggvenyek.fibonacciRek(15));
+        vege = System.nanoTime();
+        System.out.println("Rekurziv fibonacci: "+ (vege-kezdet) + " nSec");
     
     }
 }
